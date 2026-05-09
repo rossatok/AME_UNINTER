@@ -132,7 +132,32 @@ with tab3:
     """)
 
 
-# --- SEÇÃO 5: HIPERLINK ---
+# --- SEÇÃO 5: O ALTO CUSTO E A LUTA DAS FAMÍLIAS ---
+st.markdown("<h2 class='section-header'>5. O Alto Custo e o Desafio do Acesso</h2>", unsafe_allow_html=True)
+
+st.write("""
+Apesar dos enormes avanços científicos, o acesso às terapias para a AME esbarra em um obstáculo gigantesco: **o valor financeiro**. 
+Medicamentos para a doença, como a terapia gênica, já foram classificados entre os "remédios mais caros do mundo", podendo ultrapassar a marca de milhões de reais por paciente.
+""")
+
+col_a, col_b = st.columns(2)
+
+with col_a:
+    st.info("""
+    🏥 **A Situação no SUS e Planos de Saúde**\n
+    Embora o Sistema Único de Saúde (SUS) e os planos de saúde tenham incorporado tratamentos para a AME (como o Nusinersena, Risdiplam e Zolgensma), a realidade é complexa. Existem critérios clínicos rígidos para que o paciente tenha direito a receber a medicação. 
+    Muitas vezes, pacientes não se encaixam nesses protocolos específicos do governo ou sofrem com a burocracia e atrasos no fornecimento de um remédio que não pode ser interrompido.
+    """)
+
+with col_b:
+    st.warning("""
+    🤝 **A Mobilização das Famílias**\n
+    Na AME, cada dia de espera significa a perda irreversível de neurônios motores. Devido a essa urgência e às dificuldades com o governo ou convênios, as famílias recorrem à justiça (judicialização). \n
+    Para custear o tratamento inicial, advogados, e a caríssima infraestrutura de suporte à vida (respiradores, cadeiras adaptadas, fisioterapia diária e fonoaudiologia), as famílias criam **campanhas de arrecadação, vaquinhas online, rifas e pedágios solidários**. A rede de apoio da sociedade se torna fundamental pela sobrevivência da criança.
+    """)
+
+
+# --- SEÇÃO 6: HIPERLINK ---
 st.markdown("---")
 st.markdown("<h3 style='text-align: center; color: #7e57c2;'>Conheça Histórias de Vida</h3>", unsafe_allow_html=True)
 
