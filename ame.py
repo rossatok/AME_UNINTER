@@ -46,7 +46,7 @@ with col1:
 
     Sem esses sinais, os músculos tornam-se fracos, atrofiados e param de funcionar. Isso impacta atividades básicas como:
     *   Andar;
-    *   Rastejar;
+    *   Engatinhar;
     *   Sentar-se;
     *   Engolir;
     *   Respirar.
