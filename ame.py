@@ -156,11 +156,6 @@ with col_b:
     Para custear o tratamento inicial, advogados, e a caríssima infraestrutura de suporte à vida (respiradores, cadeiras adaptadas, fisioterapia diária e fonoaudiologia), as famílias criam **campanhas de arrecadação, vaquinhas online, rifas e pedágios solidários**. A rede de apoio da sociedade se torna fundamental pela sobrevivência da criança.
     """)
 
-
-
-
-
-)
 # Configuração Básica da Página
 st.set_page_config(
     page_title="Conhecendo a AME - Trabalho Acadêmico",
