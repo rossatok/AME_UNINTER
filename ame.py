@@ -200,9 +200,19 @@ with col1:
     st.markdown("[👉 Visitar @instituto_iname](https://www.instagram.com/instituto_iname/)", unsafe_allow_html=True)
 
 with col2:
-    st.markdown("🗣️ **Ana Clara Moniz**")
-    st.write("Jornalista, ativista e portadora de AME tipo 2. Ana produz um conteúdo incrível desmistificando a vida e os desafios de jovens adultos com a doença.")
-    st.markdown("[👉 Visitar @_anaclarabm](https://www.instagram.com/_anaclarabm/)", unsafe_allow_html=True)
+with col2:
+    st.markdown("👶 **Apoie Campanhas de Famílias**")
+    st.write("Abaixo estão alguns perfis de crianças e famílias que lutam diariamente contra a AME. Siga, acompanhe a rotina e ajude a divulgar suas histórias:")
+    st.markdown("""
+    * [👉 @amerenally](https://www.instagram.com/amerenally/)
+    * [👉 @ame.bianca](https://www.instagram.com/ame.bianca/)
+    * [👉 @amebryanravi](https://www.instagram.com/amebryanravi/)
+    * [👉 @amenicolas](https://www.instagram.com/amenicolas/)
+    * [👉 @ame.maju](https://www.instagram.com/ame.maju/)
+    * [👉 @ame.matheusvmotta](https://www.instagram.com/ame.matheusvmotta/)
+    * [👉 @amelaurapires](https://www.instagram.com/amelaurapires/)
+    * [👉 @familiathury](https://www.instagram.com/familiathury/)
+    """)
 
 with col3:
     st.markdown("👶 **Campanhas e Famílias**")
