@@ -145,7 +145,7 @@ col_a, col_b = st.columns(2)
 with col_a:
     st.info("""
     🏥 **A Situação no SUS e Planos de Saúde**\n
-    Embora o Sistema Único de Saúde (SUS) e os planos de saúde tenham incorporado tratamentos para a AME (como o Nusinersena, Risdiplam e Zolgensma), a realidade é complexa. Existem critérios clínicos rígidos para que o paciente tenha direito a receber a medicação. 
+    Embora o Sistema Único de Saúde (SUS) e os planos de saúde tenham incorporado tratamentos para a AME, a realidade é complexa. Existem critérios clínicos rígidos para que o paciente tenha direito a receber a medicação. 
     Muitas vezes, pacientes não se encaixam nesses protocolos específicos do governo ou sofrem com a burocracia e atrasos no fornecimento de um remédio que não pode ser interrompido.
     """)
 
@@ -230,10 +230,32 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
-# --- TÍTULO PRINCIPAL ---
-st.markdown("<h1 class='main-title'>Conhecendo a AME: Atrofia Muscular Espinhal</h1>", unsafe_allow_html=True)
+# --- SEÇÃO 6: REDES DE APOIO E HISTÓRIAS DE VIDA ---
 st.markdown("---")
+st.markdown("<h2 class='section-header' style='text-align: center;'>6. Conheça e Apoie: Redes e Histórias no Instagram</h2>", unsafe_allow_html=True)
+
+st.write("""
+Acompanhar o dia a dia de quem convive com a AME é a melhor forma de entender a doença e apoiar a causa. Abaixo, destacamos alguns perfis no Instagram de pacientes, campanhas e institutos de apoio:
+""")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("💖 **Instituto INAME**")
+    st.write("O Instituto Nacional da Atrofia Muscular Espinhal é uma das maiores associações brasileiras na luta pelos direitos e qualidade de vida das famílias.")
+    st.markdown("[👉 Visitar @instituto_iname](https://www.instagram.com/instituto_iname/)", unsafe_allow_html=True)
+
+with col2:
+    st.markdown("🗣️ **Ana Clara Moniz**")
+    st.write("Jornalista, ativista e portadora de AME tipo 2. Ana produz um conteúdo incrível desmistificando a vida e os desafios de jovens adultos com a doença.")
+    st.markdown("[👉 Visitar @_anaclarabm](https://www.instagram.com/_anaclarabm/)", unsafe_allow_html=True)
+
+with col3:
+    st.markdown("👶 **Campanhas e Famílias**")
+    st.write("Existem centenas de famílias de bebês recém-diagnosticados buscando apoio para os tratamentos. Você pode encontrá-las acompanhando tags como:")
+    st.markdown("[#ameportodos](https://www.instagram.com/explore/tags/ameportodos/) ou [#todoscontraaame](https://www.instagram.com/explore/tags/todoscontraaame/)", unsafe_allow_html=True)
+
+st.write("<br>", unsafe_allow_html=True)
 
 
 # --- RODAPÉ ---
