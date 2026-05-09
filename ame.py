@@ -49,7 +49,7 @@ with col1:
     *   Rastejar;
     *   Sentar-se;
     *   Engolir;
-    *   Respira.
+    *   Respirar.
 
     A AME afeta aproximadamente 1 em cada 10.000 nascidos vivos e é a principal causa genética de morte em bebês.
     """)
@@ -61,7 +61,7 @@ with col2:
     st.info("🧬 **Origem:** Mutação no gene SMN1.")
 
 # --- SEÇÃO 2: COMO É DESCOBERTA (DIAGNÓSTICO) ---
-st.markdown("<h2 class='section-header'>2. Como a AME é Descoberta?</h2>", unsafe_allow_html=True)
+st.markdown("<h2 class='section-header'>2. Como diagnosticar a AME?</h2>", unsafe_allow_html=True)
 
 st.write("""
 O diagnóstico da AME geralmente segue dois caminhos: a observação de sintomas ou a triagem neonatal.
