@@ -216,7 +216,7 @@ with col3:
 
 st.write("<br>", unsafe_allow_html=True)
 
-# --- SEÇÃO 6: HIPERLINK ---
+# --- SEÇÃO 7: HIPERLINK ---
 st.markdown("---")
 st.markdown("<h3 style='text-align: center; color: #7e57c2;'>Conheça Histórias de Vida</h3>", unsafe_allow_html=True)
 
