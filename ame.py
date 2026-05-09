@@ -171,12 +171,12 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center; font-size: 12px; color: grey;'>
-        Trabalho Acadêmico - Faculdade [Nome da sua faculdade] | Curso [Seu Curso]<br>
+        Trabalho Acadêmico - Faculdade UNINTER | Curso GESTÃO DA TECNOLOGIA DA INFORMAÇÃO
         Conteúdo meramente informativo. Sempre consulte profissionais de saúde.
     </div>
     """,
     unsafe_allow_html=True
-
+)
 # Configuração Básica da Página
 st.set_page_config(
     page_title="Conhecendo a AME - Trabalho Acadêmico",
