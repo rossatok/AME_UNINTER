@@ -175,7 +175,7 @@ st.markdown(
         Conteúdo meramente informativo. Sempre consulte profissionais de saúde.
     </div>
     """,
-    unsafe_allow_html=Trueimport streamlit as st
+    unsafe_allow_html=True
 
 # Configuração Básica da Página
 st.set_page_config(
