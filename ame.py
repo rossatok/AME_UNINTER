@@ -157,50 +157,9 @@ with col_b:
     """)
 
 
-# --- SEÇÃO 6: HIPERLINK ---
-st.markdown("---")
-st.markdown("<h3 style='text-align: center; color: #7e57c2;'>Conheça Histórias de Vida</h3>", unsafe_allow_html=True)
 
-# Centralizando o botão de link
-col_l, col_c, col_r = st.columns([1, 2, 1])
-with col_c:
-    st.markdown(
-        """
-        <a href="https://www.instagram.com/explore/tags/atrofiamuscularespinhal/" target="_blank">
-            <button style="
-                width: 100%;
-                background-color: #e1306c;
-                color: white;
-                padding: 15px;
-                border: none;
-                border-radius: 10px;
-                font-size: 18px;
-                font-weight: bold;
-                cursor: pointer;
-                transition: background-color 0.3s;">
-                👉 Ver no Instagram perfis da comunidade AME
-            </button>
-        </a>
-        """,
-        unsafe_allow_html=True
-    )
 
-st.write("""
-<p style='text-align: center; font-size: 12px; color: grey; margin-top: 10px;'>
-O link acima direciona para a tag #atrofiamuscularespinhal no Instagram, onde você encontrará perfis de famílias, pacientes e associações que compartilham suas rotinas.
-</p>
-""", unsafe_allow_html=True)
 
-# --- RODAPÉ ---
-st.markdown("---")
-st.markdown(
-    """
-    <div style='text-align: center; font-size: 12px; color: grey;'>
-        Trabalho Acadêmico - Faculdade UNINTER | Curso GESTÃO DA TECNOLOGIA DA INFORMAÇÃO
-        Conteúdo meramente informativo. Sempre consulte profissionais de saúde.
-    </div>
-    """,
-    unsafe_allow_html=True
 )
 # Configuração Básica da Página
 st.set_page_config(
@@ -256,6 +215,40 @@ with col3:
     st.markdown("[#ameportodos](https://www.instagram.com/explore/tags/ameportodos/) ou [#todoscontraaame](https://www.instagram.com/explore/tags/todoscontraaame/)", unsafe_allow_html=True)
 
 st.write("<br>", unsafe_allow_html=True)
+
+# --- SEÇÃO 6: HIPERLINK ---
+st.markdown("---")
+st.markdown("<h3 style='text-align: center; color: #7e57c2;'>Conheça Histórias de Vida</h3>", unsafe_allow_html=True)
+
+# Centralizando o botão de link
+col_l, col_c, col_r = st.columns([1, 2, 1])
+with col_c:
+    st.markdown(
+        """
+        <a href="https://www.instagram.com/explore/tags/atrofiamuscularespinhal/" target="_blank">
+            <button style="
+                width: 100%;
+                background-color: #e1306c;
+                color: white;
+                padding: 15px;
+                border: none;
+                border-radius: 10px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;">
+                👉 Ver no Instagram perfis da comunidade AME
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+
+st.write("""
+<p style='text-align: center; font-size: 12px; color: grey; margin-top: 10px;'>
+O link acima direciona para a tag #atrofiamuscularespinhal no Instagram, onde você encontrará perfis de famílias, pacientes e associações que compartilham suas rotinas.
+</p>
+""", unsafe_allow_html=True)
 
 
 # --- RODAPÉ ---
