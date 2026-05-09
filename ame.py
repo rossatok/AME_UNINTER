@@ -215,8 +215,8 @@ with col2:
 
 with col3:
     st.markdown("👶 **Campanhas e Famílias**")
-    st.write("Existem centenas de famílias de bebês recém-diagnosticados buscando apoio para os tratamentos. Você pode encontrá-las acompanhando tags como:")
-    st.markdown("[#ameportodos](https://www.instagram.com/explore/tags/ameportodos/) ou [#todoscontraaame](https://www.instagram.com/explore/tags/todoscontraaame/)", unsafe_allow_html=True)
+    st.write("Existem centenas de famílias de bebês recém-diagnosticados buscando apoio para os tratamentos. Você pode contatá-las através do Instagram e fazer sua contribuição.")
+
 
 st.write("<br>", unsafe_allow_html=True)
 
