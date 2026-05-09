@@ -200,7 +200,6 @@ with col1:
     st.markdown("[👉 Visitar @instituto_iname](https://www.instagram.com/instituto_iname/)", unsafe_allow_html=True)
 
 with col2:
-with col2:
     st.markdown("👶 **Apoie Campanhas de Famílias**")
     st.write("Abaixo estão alguns perfis de crianças e famílias que lutam diariamente contra a AME. Siga, acompanhe a rotina e ajude a divulgar suas histórias:")
     st.markdown("""
