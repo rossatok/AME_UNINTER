@@ -260,7 +260,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center; font-size: 12px; color: grey;'>
-        Trabalho Acadêmico - Faculdade [Nome da sua faculdade] | Curso [Seu Curso]<br>
+        Trabalho Acadêmico - UNINTER | Curso GESTÃO DA TECNOLOGIA DA INFORMAÇÃO
         Conteúdo meramente informativo. Sempre consulte profissionais de saúde.
     </div>
     """,
