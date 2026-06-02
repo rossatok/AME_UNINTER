@@ -260,7 +260,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center; font-size: 12px; color: grey;'>
-        Trabalho Acadêmico - UNINTER | Curso GESTÃO DA TECNOLOGIA DA INFORMAÇÃO
+        Trabalho Acadêmico - UNINTER | Curso GESTÃO DA TECNOLOGIA DA INFORMAÇÃO <br>
         Conteúdo meramente informativo. Sempre consulte profissionais de saúde.
     </div>
     """,
