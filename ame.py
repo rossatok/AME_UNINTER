@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 # Configuração Básica da Página
 st.set_page_config(
@@ -7,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# --- ESTILIZAÇÃO (Opcional, para deixar mais bonito) ---
+# --- ESTILIZAÇÃO ---
 st.markdown("""
 <style>
     .main-title {
@@ -55,10 +56,8 @@ with col1:
     """)
 
 with col2:
-    # Espaço para uma imagem informativa se você quiser adicionar depois.
-    # Exemplo de como adicionar imagem (descomente a linha abaixo e coloque a imagem na mesma pasta):
-    # st.image("dna_icon.png", caption="A AME tem origem genética.")
     st.info("🧬 **Origem:** Mutação no gene SMN1.")
+
 
 # --- SEÇÃO 2: COMO É DESCOBERTA (DIAGNÓSTICO) ---
 st.markdown("<h2 class='section-header'>2. Como diagnosticar a AME?</h2>", unsafe_allow_html=True)
@@ -156,33 +155,6 @@ with col_b:
     Para custear o tratamento inicial, advogados, e a caríssima infraestrutura de suporte à vida (respiradores, cadeiras adaptadas, fisioterapia diária e fonoaudiologia), as famílias criam **campanhas de arrecadação, vaquinhas online, rifas e pedágios solidários**. A rede de apoio da sociedade se torna fundamental pela sobrevivência da criança.
     """)
 
-# Configuração Básica da Página
-st.set_page_config(
-    page_title="Conhecendo a AME - Trabalho Acadêmico",
-    page_icon="🧬",
-    layout="wide"
-)
-
-# --- ESTILIZAÇÃO (Opcional, para deixar mais bonito) ---
-st.markdown("""
-<style>
-    .main-title {
-        color: #2e7d32;
-        text-align: center;
-        font-weight: bold;
-    }
-    .section-header {
-        color: #1565c0;
-        margin-top: 20px;
-    }
-    .highlight-box {
-        background-color: #f1f8e9;
-        padding: 15px;
-        border-radius: 10px;
-        border-left: 5px solid #8bc34a;
-    }
-</style>
-""", unsafe_allow_html=True)
 
 # --- SEÇÃO 6: REDES DE APOIO E HISTÓRIAS DE VIDA ---
 st.markdown("---")
@@ -218,13 +190,10 @@ with col3:
     st.write("Existem centenas de famílias de bebês recém-diagnosticados buscando apoio para os tratamentos. Você pode contatá-las através do Instagram e fazer sua contribuição.")
 
 
-st.write("<br>", unsafe_allow_html=True)
-
 # --- SEÇÃO 7: HIPERLINK ---
 st.markdown("---")
 st.markdown("<h3 style='text-align: center; color: #7e57c2;'>Conheça Histórias de Vida</h3>", unsafe_allow_html=True)
 
-# Centralizando o botão de link
 col_l, col_c, col_r = st.columns([1, 2, 1])
 with col_c:
     st.markdown(
@@ -253,6 +222,34 @@ st.write("""
 O link acima direciona para a tag #atrofiamuscularespinhal no Instagram, onde você encontrará perfis de famílias, pacientes e associações que compartilham suas rotinas.
 </p>
 """, unsafe_allow_html=True)
+
+
+# --- SEÇÃO 8: COMENTÁRIOS E VALIDAÇÃO PÚBLICA ---
+st.markdown("---")
+st.markdown("<h2 class='section-header' style='text-align: center;'>8. Espaço do Leitor e Validação</h2>", unsafe_allow_html=True)
+st.write("Deixe seu comentário, dúvida ou mensagem de apoio abaixo para registrar sua visita e ajudar no engajamento deste projeto acadêmico!")
+
+# Bloco de comentários via Giscus (substitua os campos data-repo e data-repo-id se for configurar o seu repositório no giscus.app)
+giscus_code = """
+<script src="https://giscus.app/client.js"
+        data-repo="SEU_USUARIO/SEU_REPOSITORIO"
+        data-repo-id="SEU_REPO_ID"
+        data-category="General"
+        data-category-id="SUA_CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="pt"
+        crossorigin="anonymous"
+        async>
+</script>
+"""
+
+# Renderização do componente HTML no Streamlit
+components.html(giscus_code, height=600, scrolling=True)
 
 
 # --- RODAPÉ ---
