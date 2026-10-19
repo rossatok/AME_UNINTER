@@ -224,34 +224,18 @@ O link acima direciona para a tag #atrofiamuscularespinhal no Instagram, onde vo
 """, unsafe_allow_html=True)
 
 
-# --- SEÇÃO 8: COMENTÁRIOS E VALIDAÇÃO PÚBLICA ---
+# --- SEÇÃO 8: COMENTÁRIOS ---
 st.markdown("---")
-st.markdown("<h2 class='section-header' style='text-align: center;'>8. Espaço do Leitor e Validação</h2>", unsafe_allow_html=True)
+st.markdown("<h2 class='section-header' style='text-align: center;'>8. Espaço do Leitor</h2>", unsafe_allow_html=True)
 st.write("Deixe seu comentário, dúvida ou mensagem de apoio abaixo para registrar sua visita e ajudar no engajamento deste projeto acadêmico!")
 
-<script src="https://giscus.app/client.js"
-        data-repo="rossatok/AME_UNINTER"
-        data-repo-id="R_kgDOSY9E2A"
-        data-category="General"
-        data-category-id="DIC_kwDOSY9E2M4DJD4_"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="pt"
-        crossorigin="anonymous"
-        async>
-</script>
-
-# Bloco de comentários via Giscus (substitua os campos data-repo e data-repo-id se for configurar o seu repositório no giscus.app)
+# Cole AQUI dentro das aspas triplas o script gerado pelo site giscus.app
 giscus_code = """
 <script src="https://giscus.app/client.js"
-        data-repo="SEU_USUARIO/SEU_REPOSITORIO"
-        data-repo-id="SEU_REPO_ID"
+        data-repo="seu-usuario/nome-do-repositorio"
+        data-repo-id="COLE_O_SEU_DATA_REPO_ID_AQUI"
         data-category="General"
-        data-category-id="SUA_CATEGORY_ID"
+        data-category-id="COLE_O_SEU_DATA_CATEGORY_ID_AQUI"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
@@ -264,9 +248,8 @@ giscus_code = """
 </script>
 """
 
-# Renderização do componente HTML no Streamlit
+# Renderização do componente no Streamlit
 components.html(giscus_code, height=600, scrolling=True)
-
 
 # --- RODAPÉ ---
 st.markdown("---")
