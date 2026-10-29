@@ -229,6 +229,16 @@ st.markdown("---")
 st.markdown("<h2 class='section-header' style='text-align: center;'>8. Espaço do Leitor</h2>", unsafe_allow_html=True)
 st.write("Deixe seu comentário, dúvida ou mensagem de apoio abaixo para registrar sua visita e ajudar no engajamento deste projeto acadêmico!")
 
+# Criação da caixa de texto para o comentário
+comentario = st.text_area("Escreva sua mensagem aqui:")
+
+# Botão para enviar
+if st.button("Enviar Comentário"):
+    if comentario:
+        st.success("Obrigado pelo seu comentário e apoio ao projeto!")
+        # Aqui você adicionará a lógica para salvar o comentário no seu banco de dados
+    else:
+        st.warning("Por favor, digite uma mensagem antes de enviar.")
 # Cole AQUI dentro das aspas triplas o script gerado pelo site giscus.app
 giscus_code = """
 <script src="https://giscus.app/client.js"
