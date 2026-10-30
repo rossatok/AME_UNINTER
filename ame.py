@@ -225,38 +225,46 @@ O link acima direciona para a tag #atrofiamuscularespinhal no Instagram, onde vo
 
 
 # --- SEÇÃO 8: COMENTÁRIOS ---
-st.markdown("---")
-st.markdown("<h2 class='section-header' style='text-align: center;'>8. Espaço do Leitor</h2>", unsafe_allow_html=True)
+import streamlit as st
+from supabase import create_client
+
+# Conecta ao Supabase usando as chaves secretas do Streamlit
+@st.cache_resource
+def init_connection():
+    url = st.secrets["SUPABASE_URL"]
+    key = st.secrets["SUPABASE_KEY"]
+    return create_client(url, key)
+
+supabase = init_connection()
+
+st.header("8. Espaço do Leitor")
 st.write("Deixe seu comentário, dúvida ou mensagem de apoio abaixo para registrar sua visita e ajudar no engajamento deste projeto acadêmico!")
 
-# Criação da caixa de texto para o comentário
-comentario = st.text_area("Escreva sua mensagem aqui:")
+nome = st.text_input("Seu Nome:")
+mensagem = st.text_area("Escreva sua mensagem aqui:")
 
-# Botão para enviar
 if st.button("Enviar Comentário"):
-    if comentario:
-        st.success("Obrigado pelo seu comentário e apoio ao projeto!")
-        # Aqui você adicionará a lógica para salvar o comentário no seu banco de dados
+    if nome and mensagem:
+        try:
+            supabase.table("comentarios_ame").insert({"nome": nome, "mensagem": mensagem}).execute()
+            st.success("Comentário salvo com sucesso! Obrigado pelo apoio.")
+        except Exception as e:
+            st.error("Erro ao salvar comentário. Tente novamente.")
     else:
-        st.warning("Por favor, digite uma mensagem antes de enviar.")
-# Cole AQUI dentro das aspas triplas o script gerado pelo site giscus.app
-giscus_code = """
-<script src="https://giscus.app/client.js"
-        data-repo="rossatok/AME_UNINTER"
-        data-repo-id="R_kgDOSY9E2A"
-        data-category="General"
-        data-category-id="DIC_kwDOSY9E2M4DJD4_"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="pt"
-        crossorigin="anonymous"
-        async>
-</script>
-"""
+        st.warning("Por favor, preencha seu nome e a mensagem.")
+
+st.markdown("### Comentários Registrados:")
+try:
+    resposta = supabase.table("comentarios_ame").select("*").order("created_at", desc=True).execute()
+    comentarios_bd = resposta.data
+    
+    if comentarios_bd:
+        for c in comentarios_bd:
+            st.info(f"**{c['nome']}** comentou: {c['mensagem']}")
+    else:
+        st.write("Seja o primeiro a comentar!")
+except Exception as e:
+    st.error("Não foi possível carregar os comentários no momento.")
 
 # Renderização do componente no Streamlit
 components.html(giscus_code, height=600, scrolling=True)
