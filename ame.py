@@ -266,8 +266,7 @@ try:
 except Exception as e:
     st.error("Não foi possível carregar os comentários no momento.")
 
-# Renderização do componente no Streamlit
-components.html(giscus_code, height=600, scrolling=True)
+
 
 # --- RODAPÉ ---
 st.markdown("---")
