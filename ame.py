@@ -1,5 +1,10 @@
 import streamlit as st
 import streamlit.components.v1 as components
+import uuid
+
+# Gera o identificador único invisível assim que a página é aberta
+if 'session_id' not in st.session_state:
+    st.session_state.session_id = str(uuid.uuid4())
 
 # Configuração Básica da Página
 st.set_page_config(
@@ -225,7 +230,6 @@ O link acima direciona para a tag #atrofiamuscularespinhal no Instagram, onde vo
 
 
 # --- SEÇÃO 8: COMENTÁRIOS ---
-import streamlit as st
 from supabase import create_client
 
 # Conecta ao Supabase usando as chaves secretas do Streamlit
@@ -246,7 +250,12 @@ mensagem = st.text_area("Escreva sua mensagem aqui:")
 if st.button("Enviar Comentário"):
     if nome and mensagem:
         try:
-            supabase.table("comentarios_ame").insert({"nome": nome, "mensagem": mensagem}).execute()
+            # Envia o comentário junto com a identificação da sessão gerada no topo do script
+            supabase.table("comentarios_ame").insert({
+                "nome": nome, 
+                "mensagem": mensagem,
+                "session_id": st.session_state.session_id
+            }).execute()
             st.success("Comentário salvo com sucesso! Obrigado pelo apoio.")
         except Exception as e:
             st.error("Erro ao salvar comentário. Tente novamente.")
@@ -264,7 +273,8 @@ try:
     else:
         st.write("Seja o primeiro a comentar!")
 except Exception as e:
-    st.error(f"Erro detalhado retornado pelo Supabase: {e}")
+    # A mensagem técnica de erro foi removida e substituída por um aviso amigável para o usuário final
+    st.error("Não foi possível carregar os comentários no momento.")
 
 
 
