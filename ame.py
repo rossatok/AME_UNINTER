@@ -64,8 +64,41 @@ with col2:
     st.info("🧬 **Origem:** Mutação no gene SMN1.")
 
 
-# --- SEÇÃO 2: COMO É DESCOBERTA (DIAGNÓSTICO) ---
-st.markdown("<h2 class='section-header'>2. Como diagnosticar a AME?</h2>", unsafe_allow_html=True)
+# --- SEÇÃO 2: OS TIPOS DE AME ---
+st.markdown("<h2 class='section-header'>2. Os Tipos de AME</h2>", unsafe_allow_html=True)
+
+st.write("A doença é classificada em cinco tipos (de 0 a 4) com base na idade de início dos sintomas e no maior marco motor alcançado:")
+
+st.markdown("""
+**Tipo 0**
+* **Início:** Durante a gestação (fase pré-natal).
+* **Marcos:** É a forma mais rara e grave de todas. Pode ser percebida ainda na gravidez pela diminuição dos movimentos do feto. O bebê já nasce com fraqueza muscular extrema e ausência de reflexos.
+* **Riscos:** Insuficiência respiratória grave imediata ao nascer e dificuldades de deglutição. A expectativa de vida é muito reduzida sem suporte avançado de vida imediato.
+
+**Tipo 1**
+* **Início:** Antes dos 6 meses de idade.
+* **Marcos:** É a forma mais comum. O bebê não consegue sentar sem apoio.
+* **Riscos:** Rápida perda de força, alto risco de insuficiência respiratória e dificuldade para engolir. Exige suporte de vida imediato.
+
+**Tipo 2**
+* **Início:** Entre 6 e 18 meses.
+* **Marcos:** A criança senta sem apoio, mas não consegue andar de forma independente.
+* **Riscos:** Fraqueza progressiva nas pernas e braços, problemas ortopédicos (como escoliose grave) e complicações respiratórias.
+
+**Tipo 3**
+* **Início:** Após 18 meses (infância/adolescência).
+* **Marcos:** Consegue andar de forma independente, mas pode perder essa habilidade com o passar dos anos.
+* **Riscos:** Dificuldade para subir escadas, quedas frequentes e fadiga. A expectativa de vida é normal.
+
+**Tipo 4**
+* **Início:** Fase adulta (geralmente após os 30 anos).
+* **Marcos:** Forma mais branda e rara. O paciente mantém a mobilidade ao longo da vida.
+* **Riscos:** Fraqueza muscular leve a moderada e tremores. Não afeta a expectativa de vida nem a capacidade respiratória.
+""")
+
+
+# --- SEÇÃO 3: COMO É DESCOBERTA (DIAGNÓSTICO) ---
+st.markdown("<h2 class='section-header'>3. Como diagnosticar a AME?</h2>", unsafe_allow_html=True)
 
 st.write("""
 O diagnóstico da AME geralmente segue dois caminhos: a observação de sintomas ou a triagem neonatal.
@@ -92,8 +125,8 @@ with st.expander("👶 Triagem Neonatal (Teste do Pezinho)"):
     """)
 
 
-# --- SEÇÃO 3: IMPORTÂNCIA DO DIAGNÓSTICO PRECOCE ---
-st.markdown("<h2 class='section-header'>3. A Importância Crítica do Diagnóstico Precoce</h2>", unsafe_allow_html=True)
+# --- SEÇÃO 4: IMPORTÂNCIA DO DIAGNÓSTICO PRECOCE ---
+st.markdown("<h2 class='section-header'>4. A Importância Crítica do Diagnóstico Precoce</h2>", unsafe_allow_html=True)
 
 st.markdown("""
 <div class='highlight-box'>
@@ -108,8 +141,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# --- SEÇÃO 4: TRATAMENTOS DISPONÍVEIS ---
-st.markdown("<h2 class='section-header'>4. Tratamentos Atuais</h2>", unsafe_allow_html=True)
+# --- SEÇÃO 5: TRATAMENTOS DISPONÍVEIS ---
+st.markdown("<h2 class='section-header'>5. Tratamentos Atuais</h2>", unsafe_allow_html=True)
 
 st.write("""
 Até poucos anos atrás, não existia tratamento para a AME, apenas cuidados paliativos. Hoje, existem terapias revolucionárias que, embora não curem a doença, mudam completamente o seu prognóstico. As principais disponíveis no mundo e no Brasil (algumas via SUS e outras via planos de saúde) são:
@@ -136,8 +169,8 @@ with tab3:
     """)
 
 
-# --- SEÇÃO 5: O ALTO CUSTO E A LUTA DAS FAMÍLIAS ---
-st.markdown("<h2 class='section-header'>5. O Alto Custo e o Desafio do Acesso</h2>", unsafe_allow_html=True)
+# --- SEÇÃO 6: O ALTO CUSTO E A LUTA DAS FAMÍLIAS ---
+st.markdown("<h2 class='section-header'>6. O Alto Custo e o Desafio do Acesso</h2>", unsafe_allow_html=True)
 
 st.write("""
 Apesar dos enormes avanços científicos, o acesso às terapias para a AME esbarra em um obstáculo gigantesco: **o valor financeiro**. 
@@ -161,9 +194,9 @@ with col_b:
     """)
 
 
-# --- SEÇÃO 6: REDES DE APOIO E HISTÓRIAS DE VIDA ---
+# --- SEÇÃO 7: REDES DE APOIO E HISTÓRIAS DE VIDA ---
 st.markdown("---")
-st.markdown("<h2 class='section-header' style='text-align: center;'>6. Conheça e Apoie: Redes e Histórias no Instagram</h2>", unsafe_allow_html=True)
+st.markdown("<h2 class='section-header' style='text-align: center;'>7. Conheça e Apoie: Redes e Histórias no Instagram</h2>", unsafe_allow_html=True)
 
 st.write("""
 Acompanhar o dia a dia de quem convive com a AME é a melhor forma de entender a doença e apoiar a causa. Abaixo, destacamos alguns perfis no Instagram de pacientes, campanhas e institutos de apoio:
@@ -195,7 +228,7 @@ with col3:
     st.write("Existem centenas de famílias de bebês recém-diagnosticados buscando apoio para os tratamentos. Você pode contatá-las através do Instagram e fazer sua contribuição.")
 
 
-# --- SEÇÃO 7: HIPERLINK ---
+# --- HIPERLINK ---
 st.markdown("---")
 st.markdown("<h3 style='text-align: center; color: #7e57c2;'>Conheça Histórias de Vida</h3>", unsafe_allow_html=True)
 
@@ -273,7 +306,6 @@ try:
     else:
         st.write("Seja o primeiro a comentar!")
 except Exception as e:
-    # A mensagem técnica de erro foi removida e substituída por um aviso amigável para o usuário final
     st.error("Não foi possível carregar os comentários no momento.")
 
 
