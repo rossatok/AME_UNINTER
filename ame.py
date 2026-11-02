@@ -142,7 +142,7 @@ st.markdown("""
 
 
 # --- SEÇÃO 5: TRATAMENTOS DISPONÍVEIS ---
-st.markdown("<h2 class='section-header'>5. Tratamentos Atuais</h2>", unsafe_allow_html=True)
+st.markdown("<h2 class='section-header'>5. Tratamentos Atuais e Estimativas de Custo</h2>", unsafe_allow_html=True)
 
 st.write("""
 Até poucos anos atrás, não existia tratamento para a AME, apenas cuidados paliativos. Hoje, existem terapias revolucionárias que, embora não curem a doença, mudam completamente o seu prognóstico. As principais disponíveis no mundo e no Brasil (algumas via SUS e outras via planos de saúde) são:
@@ -153,20 +153,23 @@ tab1, tab2, tab3 = st.tabs(["Nusinersena", "Risdiplam", "Terapia Gênica"])
 with tab1:
     st.subheader("Nusinersena (Spinraza®)")
     st.write("""
-    É um medicamento injetado diretamente no fluido espinhal (via intrathecal). Ele ajuda o corpo a produzir mais proteína funcional a partir de um gene "reserva" (SMN2). Requer doses de manutenção ao longo da vida.
+    É um medicamento injetado diretamente no fluido espinhal (via intratecal). Ele ajuda o corpo a produzir mais proteína funcional a partir de um gene "reserva" (SMN2). Requer doses de manutenção ao longo da vida.
     """)
+    st.warning("💰 **Custo estimado:** Cerca de R$ 555 mil por frasco. O primeiro ano de tratamento (que exige 6 doses de ataque) pode ultrapassar a marca de R$ 3,3 milhões. A manutenção nos anos seguintes (3 doses anuais) fica em torno de R$ 1,67 milhão por ano.")
 
 with tab2:
     st.subheader("Risdiplam (Evrysdi®)")
     st.write("""
     É o primeiro tratamento oral para a AME. É um xarope tomado diariamente em casa. Ele funciona de forma semelhante ao Nusinersena, aumentando a produção da proteína SMN funcional pelo gene SMN2.
     """)
+    st.warning("💰 **Custo estimado:** O frasco custa em média de R$ 70 mil a R$ 114 mil. Como a dosagem é ajustada continuamente conforme o peso do paciente, o tratamento anual costuma ultrapassar R$ 1 milhão ao longo de toda a vida.")
 
 with tab3:
     st.subheader("Onasemnogene Abeparvoveque (Zolgensma®)")
     st.write("""
     É conhecido como a "terapia gênica". É um tratamento de dose única, administrado por via intravenosa. Ele funciona entregando uma cópia funcional do gene SMN1 diretamente para as células do corpo, permitindo que elas produzam a proteína necessária. É indicado para crianças pequenas, dependendo de critérios médicos específicos.
     """)
+    st.warning("💰 **Custo estimado:** Historicamente apelidado de 'remédio mais caro do mundo', o valor atual da sua dose única no Brasil costuma orbitar entre R$ 6 milhões e R$ 7 milhões por paciente, podendo variar de acordo com o câmbio e acordos de compra do Ministério da Saúde.")
 
 
 # --- SEÇÃO 6: O ALTO CUSTO E A LUTA DAS FAMÍLIAS ---
