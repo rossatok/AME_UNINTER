@@ -264,7 +264,7 @@ try:
     else:
         st.write("Seja o primeiro a comentar!")
 except Exception as e:
-    st.error("Não foi possível carregar os comentários no momento.")
+    st.error(f"Erro detalhado retornado pelo Supabase: {e}")
 
 
 
